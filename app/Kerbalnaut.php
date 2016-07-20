@@ -8,10 +8,10 @@ class Kerbalnaut extends Model
 {
 // a kerbalnaut belongs to many missions. A kerbalnaut belongs to many missioncrew.
 // many mission crews belong to mission
-//    public function missions()
-//    {
-//        return $this->hasMany(Mission::class);
-//    }
+    public function missioncrew()
+    {
+        return $this->hasManyThrough(Mission::class,MissionCrew::class,'kerbalnaut_id','id');
+    }
 
     public function evas()
     {
@@ -22,6 +22,5 @@ class Kerbalnaut extends Model
     {
         return $this->hasMany(Achievement::class);
     }
-
 
 }

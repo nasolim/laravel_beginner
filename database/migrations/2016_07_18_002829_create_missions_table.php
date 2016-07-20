@@ -21,7 +21,7 @@ class CreateMissionsTable extends Migration
             $table->date('return_date');
             $table->integer('flight_hrs')->unsigned();
             $table->integer('flight_mins')->unsigned();
-            $table->integer('status')->unsigned();
+            $table->integer('status')->unsigned();       // 0 - Planning   1 - Active   2 - Accomplished 3 - Cancelled 4 - Failed
             $table->timestamps();
         });
     }
