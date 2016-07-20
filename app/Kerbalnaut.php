@@ -11,8 +11,9 @@ class Kerbalnaut extends Model
     public function missioncrew()
     {
         return $this->hasManyThrough(Mission::class,MissionCrew::class,'kerbalnaut_id','id');
+        
     }
-
+// evas will have the same DB connections as missioncrews. 
     public function evas()
     {
         return $this->hasMany(EVA::class);
