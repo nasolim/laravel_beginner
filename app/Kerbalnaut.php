@@ -10,7 +10,7 @@ class Kerbalnaut extends Model
 // many mission crews belong to mission
     public function missions()
     {
-        return $this->belongsToMany('App\Mission','mission_crews');
+        return $this->belongsToMany(Mission::class,'mission_crews');
 
     }
 // evas will have the same DB connections as missioncrews.

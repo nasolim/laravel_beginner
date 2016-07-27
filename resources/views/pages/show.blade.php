@@ -6,11 +6,16 @@
 
 
      {{$kerbal->last_name}}, {{$kerbal->first_name}}
-
+     <br>
+     Total Missions: {{$kerbal->missions->count()}}
+     Total Time In Space: {{$kerbal->missions->sum('flight_hrs')}}:{{$kerbal->missions->sum('flight_mins')}}
+     <br>
+     EVA Time: {{$kerbal->evas->sum('hrs')}}:{{$kerbal->evas->sum('mins')}}
+     Total EVA's: {{$kerbal->evas->count()}}
 
      <ol>
          @foreach ($kerbal->missions as $journey)
-             <li>Mission ID: {{$journey->name}}</li><!-- This is going to be a link to the mission page.-->
+             <li>Name: <a href="#">{{$journey->name}}</a></li><!-- This is going to be a link to the mission page.-->
              <ul>
                  <li>Origin: {{$journey->origin}}</li>
                  <li>Destination: {{$journey->target}}</li>
@@ -23,15 +28,6 @@
      </ol>
 
 
-     <ol>
-     @foreach ($kerbal->evas as $eva)
-             <li>Mission ID: {{$eva->mission_id}}</li>
-             <ul>
-         <li>Hrs: {{$eva->hrs}}</li>
-         <li>Mins: {{$eva->mins}}</li>
-        </ul>
-     @endforeach
-     </ol>
 
 
 <a href = "/team">Back to the Team</a>

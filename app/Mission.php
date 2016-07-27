@@ -6,9 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Mission extends Model
 {
+
+    protected $fillable = ['name','origin','target','launch_date','return_date','flight_hrs','flight_mins','status'];
+
     public function kerbalnaut()
     {
-        return $this->belongsTo(Kerbalnaut::class);
+        return $this->belongsToMany(Kerbalnaut::class,'mission_crews');
     }
 
     public function crews()
@@ -21,3 +24,9 @@ class Mission extends Model
         return $this->hasMany(Achievement::class);
     }
 }
+
+
+
+
+
+
