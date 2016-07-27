@@ -15,7 +15,9 @@ class CreateEVAsTable extends Migration
         Schema::create('evas', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('kerbalnaut_id')->unsigned();
+            $table->foreign('kerbalnaut_id')->references('id')->on('kerbalnauts');
             $table->integer('mission_id')->unsigned();
+            $table->foreign('mission_id')->references('id')->on('missions');
             $table->integer('hrs')->unsigned();
             $table->integer('mins')->unsigned();
             $table->timestamps();

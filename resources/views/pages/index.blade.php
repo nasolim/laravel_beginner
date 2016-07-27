@@ -1,5 +1,7 @@
 @extends('layout')
-
+@section('header')
+    <title>Team Page</title>
+@stop
 
 @section('content')
 

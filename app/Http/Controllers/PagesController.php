@@ -15,8 +15,8 @@ class PagesController extends Controller
         return view('pages.index',compact('kerbals'));
     }
 
-    public function show(Kerbalnaut $kerbal_id)
+    public function show(Kerbalnaut $kerbal)
     {
-        return view('pages.show',compact('kerbal_id'));
+        return view('pages.show',compact('kerbal'));
     }
 }

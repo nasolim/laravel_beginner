@@ -12,4 +12,5 @@ class EVA extends Model
     {
         return $this->belongsTo(Kerbalnaut::class);
     }
+    
 }
