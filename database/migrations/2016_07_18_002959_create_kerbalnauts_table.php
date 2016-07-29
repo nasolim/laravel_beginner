@@ -7,7 +7,7 @@ class CreateKerbalnautsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * Portaits from http://promyx.deviantart.com/gallery/53832086/Kerbal-Portraits
      * @return void
      */
     public function up()
@@ -21,6 +21,7 @@ class CreateKerbalnautsTable extends Migration
             $table->date('hire_date');          
             $table->integer('mission_status');     // Ready for Mission , On Mission, Unavailable
             $table->binary('is_alive');         // 0 - dead 1 - alive
+            $table->string('portrait');
             $table->timestamps();
         });
     }

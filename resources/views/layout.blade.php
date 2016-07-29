@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     @yield('header')
 
     <style>
@@ -35,11 +35,9 @@
     </style>
 </head>
 <body>
-
-@yield('content')
-@yield('footer')
-
-
-</div>
+    {{--<div class="'container">--}}
+        @yield('content')
+        @yield('footer')
+    {{--</div>--}}
 </body>
 </html>

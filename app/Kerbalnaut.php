@@ -8,6 +8,8 @@ class Kerbalnaut extends Model
 {
 // a kerbalnaut belongs to many missions. A kerbalnaut belongs to many missioncrew.
 // many mission crews belong to mission
+    protected $fillable = ['last_name','first_name','gender','role','hire_date','mission_status','is_alive','portrait'];
+
     public function missions()
     {
         return $this->belongsToMany(Mission::class,'mission_crews');
