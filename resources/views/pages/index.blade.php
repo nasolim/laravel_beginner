@@ -9,14 +9,6 @@
         </div>
         <div class="row" >
 
-
-
-
-
-
-
-
-
             @foreach ($kerbals as $kerbal)
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
 
@@ -28,16 +20,6 @@
                             <a href="/team/{{ $kerbal->id }}" class="btn btn-primary">Bio</a>
                         </div>
                     </div>
-
-
-
-                    {{--<img src="" height="200" width="160"><br>--}}
-                    {{--<a href = "/team/{{ $kerbal->id }}"> {{ $kerbal->first_name }} {{ $kerbal->last_name }}</a>--}}
-
-
-
-
-
                 </div>
             @endforeach
 

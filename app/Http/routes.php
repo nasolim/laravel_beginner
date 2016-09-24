@@ -18,6 +18,7 @@ Route::get('/', function () {
 
 Route::get('team','PagesController@index');
 Route::get('team/{kerbal}','PagesController@show');
+Route::get('missions','PagesController@show_mission');
 
 
 

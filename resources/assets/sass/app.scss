@@ -1,2 +1,36 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// first import bootstrap variable
+@import "bootstrap/stylesheets/bootstrap/variables";
+// second import the COSMO theme variables
+@import "bootswatch/cosmo/variables";
+// third import bootstrap
+@import "bootstrap/stylesheets/bootstrap";
+// forth import cosmo bootswatch
+@import "bootswatch/cosmo/bootswatch";
 
+.flash {
+  background: #f66422;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: #D6D8BC;
+}
+
+h3 {
+
+}
+
+#is_alive {
+  background-color: #52808B;
+  color: white;
+}
+
+#is_dead {
+  background-color: #800202;
+  color: white;
+}
+
+.list-group-item-info {
+  background-color: #D6D8BC;
+  color: black;
+}
